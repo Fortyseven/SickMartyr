@@ -1,0 +1,19 @@
+{
+  "name": "SickMartyr",
+  "version": "1.0.0",
+  "authors": [
+    "fortyseven <fortyseven@gmail.com>"
+  ],
+  "description": "Generates random Kickstarter projects",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
