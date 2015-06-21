@@ -1,0 +1,92 @@
+#Header {
+  border-bottom: 1px solid #d9d9de;
+  height: 61px;
+  background-color: white;
+  box-shadow: 2px 2px 5px #e9e9ee;
+  font-size: 11pt;
+  overflow: hidden;
+}
+#Header .nav-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  height: 100%;
+}
+#Header .site-logo {
+  display: block;
+  height: 100%;
+  float: left;
+  position: absolute;
+}
+#Header .ksr-logo {
+  display: inline-block;
+  min-width: 150px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  vertical-align: baseline;
+  height: 100%;
+  float: left;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  top: 25%;
+  position: relative;
+}
+#Header .ksr-logo a {
+  color: limegreen;
+  text-decoration: none;
+  font-weight: bolder;
+}
+#Header .ksr-logo a span {
+  color: black;
+}
+#Header h1 {
+  padding: 0;
+  margin: 0;
+}
+#Header .link-box {
+  width: 200px;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+#Header div.middle {
+  flex: auto;
+  border-left: 1px solid #d9d9de;
+  border-right: 1px solid #d9d9de;
+  height: 100%;
+  padding-left: 1rem;
+}
+#Header div.middle .searchbox {
+  height: 100%;
+}
+#Header div.middle .searchbox .icon {
+  display: inline-block;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+#Header div.middle .searchbox input {
+  background: white;
+  height: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: text;
+  color: black;
+  font-weight: bold;
+  font-size: 1em;
+}
+#Header div.middle .searchbox input:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+#Header div.fake-link {
+  display: inline-block;
+  width: 50%;
+  color: #828587;
+  padding-top: 1.5rem;
+  font-size: 1em;
+  font-weight: bold;
+  float: left;
+}

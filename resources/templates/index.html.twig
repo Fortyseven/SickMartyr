@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="projects_show  fontface js skrollr skrollr-desktop" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>{{ camp.name }} — Kickstarter</title>
+        <meta content="width=device-width,initial-scale=1" name="viewport">
+
+        <link href="assets/css/style.css" rel="stylesheet"/>
+        <link href="assets/favicon.ico" rel="icon" type="image/x-icon"/>
+    </head>
+
+    <body>
+        <div id="Header">
+            {% include "header.html.twig" %}
+        </div>
+        <div id="Content">
+            {%  include "project-body.html.twig" %}
+        </div>
+        <div id="Footer"></div>
+        <script>
+            //            function FetchGoogleImageForTerm( title )
+            //            {
+            //                console.log( "REVERTING TO GIS SEARCH: ", title );
+            //
+            //                $.ajax( {
+            //                            url: "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=" +
+            //                                 escape( title ),
+            //                            dataType:      "jsonp",
+            //                            jsonpCallback: "jsonprec",
+            //                            success:       function ( data, textStatus )
+            //                            {
+            //                                console.log( "GIS RESULT: ",
+            //                                             data.responseData.results[ 0 ].url );
+            //                                $( "#BackgroundImage" ).css( 'background-image',
+            //                                                             "url(" +
+            //                                                             data.responseData.results[ 0 ].url +
+            //                                                             ")" );
+            //                            }
+            //                        } );
+            //            }
+        </script>
+    </body>
+</html>

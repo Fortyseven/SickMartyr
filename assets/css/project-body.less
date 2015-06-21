@@ -1,0 +1,53 @@
+@import "globals.less";
+
+#Content {
+    width:        1080px;
+    margin-left:  auto;
+    margin-right: auto;
+    text-align:   center;
+    #ProjectHeader {
+        padding-top: 3rem;
+    }
+    .project-name {
+        font-size: 2.0rem;
+    }
+    .project-owner {
+        padding-top:    1rem;
+        font-size:      0.9rem;
+        span {
+            font-weight: bold;
+        }
+        padding-bottom: 2rem;
+    }
+
+    .video-block {
+        width:               681px;
+        height:              511px;
+        background:          black;
+        display:             absolute;
+        user-select:         none;
+        -webkit-user-select: none;
+        -moz-user-select:    none;
+        
+        .play {
+            background:    darkgreen;
+            color:         white;
+            width:         144px;
+            height:        54px;
+            border:        5px solid white;
+            border-radius: 1em;
+            margin-left:   auto;
+            margin-right:  auto;
+            position:      relative;
+            top:           45%;
+            z-index:       999;
+            line-height:   3.5;
+            font-weight:   bold;
+            cursor:        pointer;
+
+            &:hover {
+                background: limegreen;
+            }
+        }
+    }
+}

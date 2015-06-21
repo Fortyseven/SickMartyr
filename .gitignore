@@ -1,2 +1,5 @@
-bower_components
+bower_components/
 .idea/
+vendor/
+temp/
+*~

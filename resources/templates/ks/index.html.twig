@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="projects_show  fontface js skrollr skrollr-desktop" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>{{ camp.name }} — Kickstarter</title>
+        <meta content="width=device-width,initial-scale=1" name="viewport">
+
+        {#<link href="https://d297h9he240fqh.cloudfront.net/assets/packages/base-2c1ff5bd3ed8f904052bd7d1d4327fd62e44f07f754ddeccb69a00ccab998dcb.css" media="screen,print" rel="stylesheet">#}
+        {#<link href="https://d297h9he240fqh.cloudfront.net/assets/packages/application-5d8b241f4a7e26ef73b59dacaf3fb5ce0ca9ce2adb771ed0fbfcb8e96f1042ef.css" media="screen,print" rel="stylesheet">#}
+
+        {#<link href="assets/ks/css/base1.css" media="screen,print" rel="stylesheet"/>#}
+        <link href="assets/css/style.css" rel="stylesheet"/>
+        {#<link href="assets/ks/css/base2.css" media="screen,print" rel="stylesheet">#}
+
+        <link href="assets/favicon.ico" rel="icon" type="image/x-icon"/>
+    </head>
+
+    <body class="project projects not-mobile not-phone not-forces-video-controls not-tablet not-ipad not-iphone not-ios not-android not-touchable not-native-app-request not-apple-pay-capable responsive"
+          id="projects_show"
+          data-twttr-rendered="true">
+        <header class="NS_layouts__navigation site-nav"
+                id="header"
+                role="banner">
+            {% include "header.html.twig" %}
+        </header>
+        <main role="main">
+            {% include "main.html.twig" %}
+        </main>
+        <footer class="mega-footer js-mega-footer" role="contentinfo">
+            {% include "footer.html.twig" %}
+        </footer>
+
+        <script>
+//            function FetchGoogleImageForTerm( title )
+//            {
+//                console.log( "REVERTING TO GIS SEARCH: ", title );
+//
+//                $.ajax( {
+//                            url: "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=" +
+//                                 escape( title ),
+//                            dataType:      "jsonp",
+//                            jsonpCallback: "jsonprec",
+//                            success:       function ( data, textStatus )
+//                            {
+//                                console.log( "GIS RESULT: ",
+//                                             data.responseData.results[ 0 ].url );
+//                                $( "#BackgroundImage" ).css( 'background-image',
+//                                                             "url(" +
+//                                                             data.responseData.results[ 0 ].url +
+//                                                             ")" );
+//                            }
+//                        } );
+//            }
+        </script>
+    </body>
+</html>

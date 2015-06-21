@@ -1,0 +1,13 @@
+{
+    "name": "fortyseven/sick-martyr",
+    "authors": [
+        {
+            "name": "fortyseven",
+            "email": "fortyseven@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^1.18",
+        "fzaninotto/faker": "^1.5"
+    }
+}
