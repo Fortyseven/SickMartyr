@@ -4,7 +4,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>{{ camp.name }} — Kickstarter</title>
         <meta content="width=device-width,initial-scale=1" name="viewport">
-
         <link href="assets/css/style.css" rel="stylesheet"/>
         <link href="assets/favicon.ico" rel="icon" type="image/x-icon"/>
     </head>
@@ -14,30 +13,40 @@
             {% include "header.html.twig" %}
         </div>
         <div id="Content">
-            {%  include "project-body.html.twig" %}
+            {% include "project-body.html.twig" %}
         </div>
         <div id="Footer"></div>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script>
-            //            function FetchGoogleImageForTerm( title )
-            //            {
-            //                console.log( "REVERTING TO GIS SEARCH: ", title );
-            //
-            //                $.ajax( {
-            //                            url: "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=" +
-            //                                 escape( title ),
-            //                            dataType:      "jsonp",
-            //                            jsonpCallback: "jsonprec",
-            //                            success:       function ( data, textStatus )
-            //                            {
-            //                                console.log( "GIS RESULT: ",
-            //                                             data.responseData.results[ 0 ].url );
-            //                                $( "#BackgroundImage" ).css( 'background-image',
-            //                                                             "url(" +
-            //                                                             data.responseData.results[ 0 ].url +
-            //                                                             ")" );
-            //                            }
-            //                        } );
-            //            }
+            $( document ).ready( function ()
+             {
+                 {#var loc = document.location.toString();#}
+                 {#document.location = loc.substr( 0, loc.indexOf( "#" ) || 3 ) + "#{{ camp.Seed }}";#}
+
+                 FetchGoogleImageForTerm( "{{ camp.ProjectName }}" );
+             } );
+
+            function FetchGoogleImageForTerm( title )
+            {
+                $.ajax( {
+                            url: "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=" +
+                                 escape( title ),
+                            dataType:      "jsonp",
+                            jsonpCallback: "jsonprec",
+                            success:       function ( data, textStatus )
+                            {
+                                $( "#VideoBlock" ).css( 'background-image',
+                                                        "url(" +
+                                                        data.responseData.results[ 0 ].url +
+                                                        ")" );
+                            },
+                            timeout: 500,
+                            error: function(XHR) {
+                                console.log("whoopps", XHR);
+                            }
+                        } );
+            }
         </script>
+
     </body>
 </html>

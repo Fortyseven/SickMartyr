@@ -7,47 +7,84 @@
     text-align:   center;
     #ProjectHeader {
         padding-top: 3rem;
-    }
-    .project-name {
-        font-size: 2.0rem;
-    }
-    .project-owner {
-        padding-top:    1rem;
-        font-size:      0.9rem;
-        span {
-            font-weight: bold;
+
+        .project-name {
+            font-size: 2.0rem;
         }
-        padding-bottom: 2rem;
+        .project-owner {
+            padding-top:    1rem;
+            font-size:      0.9rem;
+            span {
+                font-weight: bold;
+            }
+            padding-bottom: 2rem;
+        }
     }
 
-    .video-block {
-        width:               681px;
-        height:              511px;
-        background:          black;
-        display:             absolute;
-        user-select:         none;
-        -webkit-user-select: none;
-        -moz-user-select:    none;
-        
-        .play {
-            background:    darkgreen;
-            color:         white;
-            width:         144px;
-            height:        54px;
-            border:        5px solid white;
-            border-radius: 1em;
-            margin-left:   auto;
-            margin-right:  auto;
-            position:      relative;
-            top:           45%;
-            z-index:       999;
-            line-height:   3.5;
-            font-weight:   bold;
-            cursor:        pointer;
+    #ProjectMiddle {
+        display: flex;
+        #VideoBlock {
+            width:               681px;
+            height:              511px;
+            background:          black;
+            background-position: center;
+            background-repeat:   no-repeat;
+            background-size:     cover;
+            display:             absolute;
+            float:               left;
+            user-select:         none;
+            -webkit-user-select: none;
+            -moz-user-select:    none;
 
-            &:hover {
-                background: limegreen;
+            .play {
+                background:    darkgreen;
+                color:         white;
+                width:         144px;
+                height:        54px;
+                border:        5px solid white;
+                border-radius: 1rem;
+                margin-left:   auto;
+                margin-right:  auto;
+                position:      relative;
+                top:           45%;
+                z-index:       999;
+                line-height:   3.5;
+                font-weight:   bold;
+                cursor:        pointer;
+
+                &:hover {
+                    background: limegreen;
+                }
             }
         }
+
+        .project-stats-block {
+            float:        right;
+            flex:         auto;
+            text-align:   left;
+            font-weight:  bold;
+            padding-left: 2rem;
+            .values {
+                font-size:   3rem;
+                padding-top: 1.5rem;
+            }
+
+            .back-this-block {
+                padding-top: 2rem;
+                div {
+                    display:       inline-block;
+                    background:    #2bde73;
+                    color:         white;
+                    padding:       1rem 1.5rem;
+                    border-radius: 0.5rem;
+
+                    &:hover {
+                        background: #2bde73 - #222;
+                        transition: background 0.2s;
+                    }
+                }
+            }
+        }
+
     }
 }

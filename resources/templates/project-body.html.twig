@@ -1,7 +1,23 @@
 <div id="ProjectHeader">
     <div class="project-name">{{ camp.ProjectName }}</div>
     <div class="project-owner">by <span>{{ camp.OwnerName }}</span></div>
-    <div class="video-block">
+</div>
+<div id="ProjectMiddle">
+    <div id="VideoBlock">
         <div class="play">&#9658; PLAY</div>
     </div>
+    <div class="project-stats-block">
+        <div class="values">{{ camp.NumBackers|number_format }}</div>
+        <div>backers</div>
+        <div class="values">${{ camp.Pledged|number_format }}</div>
+        <div>
+            pledged of ${{ camp.Goal|number_format }} goal
+        </div>
+        <div class="values">{{camp.DaysToGo}}</div>
+        <div>days to go</div>
+        <div class="back-this-block">
+            <div>Back This Project</div>
+        </div>
+    </div>
+
 </div>

@@ -12,9 +12,18 @@
     use BT\SickMartyr;
 
 
+
+    function make_seed()
+    {
+        list( $usec, $sec ) = explode( ' ', microtime() );
+
+        return (float)$sec + ( (float)$usec * 100000 );
+    }
+
+    $generated_seed = make_seed();
+
     class App
     {
-
         /* @var Twig_Environment */
         private $_twig;
 
@@ -24,7 +33,11 @@
 
         function Init()
         {
+            global $generated_seed;
+
             Twig_Autoloader::register();
+
+            mt_srand( $generated_seed );
 
             $this->_loader = new Twig_Loader_Filesystem( TEMPLATE_PATH );
             $this->_twig   = new Twig_Environment( $this->_loader,
