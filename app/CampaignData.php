@@ -9,7 +9,19 @@
     {
         /* @var string */
         public $ProjectName;
+        /* @var string */
+        public $ProjectType;
 
+        /* @var int */
+        public $NumBackers;
+
+        /* @var int */
+        public $Goal;
+        /* @var int */
+        public $Pledged;
+
+        /* @var int */
+        public $DaysToGo;
 
         /* @var string */
         public $OwnerGender;
