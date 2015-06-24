@@ -1,10 +1,12 @@
 @import "globals.less";
 
 #Content {
-    width:        1080px;
+    max-width:    1080px;
+    min-height:   500px;
     margin-left:  auto;
     margin-right: auto;
     text-align:   center;
+
     #ProjectHeader {
         padding-top: 3rem;
 
@@ -22,31 +24,36 @@
     }
 
     #ProjectMiddle {
-        display: flex;
+        display:   inline-block;
+        width:     100%;
+        max-width: 1080px;
+
         #VideoBlock {
-            width:               681px;
-            height:              511px;
-            background:          black;
-            background-position: center;
-            background-repeat:   no-repeat;
-            background-size:     cover;
-            display:             absolute;
+            width:               65%;
+            max-width:           681px;
+            max-height:          511px;
+
+            margin-left:         1rem;
             float:               left;
+
             user-select:         none;
             -webkit-user-select: none;
             -moz-user-select:    none;
 
+            background-size:     cover !important;
+            background:          black no-repeat center;
+
             .play {
-                background:    darkgreen;
-                color:         white;
+                position:      relative;
+                top:           42%;
                 width:         144px;
                 height:        54px;
                 border:        5px solid white;
                 border-radius: 1rem;
                 margin-left:   auto;
                 margin-right:  auto;
-                position:      relative;
-                top:           45%;
+                background:    darkgreen;
+                color:         white;
                 z-index:       999;
                 line-height:   3.5;
                 font-weight:   bold;
@@ -60,10 +67,11 @@
 
         .project-stats-block {
             float:        right;
-            flex:         auto;
             text-align:   left;
             font-weight:  bold;
-            padding-left: 2rem;
+            width:        30%;
+            max-width:    368px;
+            padding-left: 1rem;
             .values {
                 font-size:   3rem;
                 padding-top: 1.5rem;
@@ -73,18 +81,35 @@
                 padding-top: 2rem;
                 div {
                     display:       inline-block;
-                    background:    #2bde73;
+                    background:    @ks-primary;
                     color:         white;
                     padding:       1rem 1.5rem;
                     border-radius: 0.5rem;
 
                     &:hover {
-                        background: #2bde73 - #222;
+                        background: @ks-primary - #222;
                         transition: background 0.2s;
                     }
                 }
             }
-        }
 
+            .remind-me {
+                color:       @ks-primary;
+                padding-top: 2rem;
+            }
+
+            /* Pops "Remind Me" to right of "Back This" button on wide screens */
+            @media (min-width: 1024px) {
+                .back-this-block {
+                    float: left;
+                }
+
+                .remind-me {
+                    padding-top:   3rem;
+                    padding-right: 3rem;
+                    float:         right;
+                }
+            }
+        }
     }
 }

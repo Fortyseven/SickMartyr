@@ -17,36 +17,21 @@
         </div>
         <div id="Footer"></div>
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="assets/js/main.js"></script>
         <script>
             $( document ).ready( function ()
-             {
-                 {#var loc = document.location.toString();#}
-                 {#document.location = loc.substr( 0, loc.indexOf( "#" ) || 3 ) + "#{{ camp.Seed }}";#}
+                                 {
+                                     {#var loc = document.location.toString();#}
+                                     {#document.location = loc.substr( 0,#}
+                                                                       {#loc.indexOf( "#" ) ||#}
+                                                                       {#3 ) +#}
+                                                           {#{{ camp.Seed }}";#}
+                                     {#}#}
 
-                 FetchGoogleImageForTerm( "{{ camp.ProjectName }}" );
-             } );
 
-            function FetchGoogleImageForTerm( title )
-            {
-                $.ajax( {
-                            url: "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=" +
-                                 escape( title ),
-                            dataType:      "jsonp",
-                            jsonpCallback: "jsonprec",
-                            success:       function ( data, textStatus )
-                            {
-                                $( "#VideoBlock" ).css( 'background-image',
-                                                        "url(" +
-                                                        data.responseData.results[ 0 ].url +
-                                                        ")" );
-                            },
-                            timeout: 500,
-                            error: function(XHR) {
-                                console.log("whoopps", XHR);
-                            }
-                        } );
-            }
+                                     resizeElements();
+                                     FetchGoogleImageForTerm( "{{ camp.ProjectName }}" );
+                                 } );
         </script>
-
     </body>
 </html>
