@@ -1,16 +1,8 @@
 <?php
     namespace BT\SickMartyr;
 
-    /**
-     * Created by PhpStorm.
-     * User: fortyseven
-     * Date: 6/20/15
-     * Time: 12:54 PM
-     */
     class ProjectNameProvider extends \Faker\Provider\Base
     {
-        private $_faker;
-
         private static $_nouns = [ 'aardvark', 'abyssinian', 'accelerator',
                                    'accordion', 'account', 'accountant',
                                    'acknowledgment', 'acoustic', 'acrylic',
@@ -619,7 +611,6 @@
                                        "yellow", "young", "mixed-up", "insane",
                                        "special", "wacky", "delicious",
                                        "extreme"
-
         ];
 
 
