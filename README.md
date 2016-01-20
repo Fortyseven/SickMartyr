@@ -1,6 +1,8 @@
 # SickMartyr
 Website that generates fake KickStarter parodies. Uses PHP, Twig, Faker, and GIS.
 
+Try it: http://bytestemplar.com/misc/toys/SickMartyr/
+
 <img src="http://i.imgur.com/9HZxJLA.png"/>
 
 ## Notes (TODO, etc.)
